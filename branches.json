@@ -1,0 +1,8 @@
+{
+  "integration": "main",
+  "workstreams": [
+    "codex/reference-migration",
+    "codex/initial-condition-family"
+  ],
+  "status": "Prepared starting points; implementations are not implied."
+}
