@@ -1,5 +1,8 @@
 # dysthe-core
 
+**Scope: water-wave Dysthe only.** See [SCOPE.md](SCOPE.md) for the fixed
+physical model, exclusions and enforced boundaries.
+
 Equation specification, reference solvers, initial fields, diagnostics, and shared data contracts.
 
 **Status: migration scaffold.** No solver or trained predictor has been ported

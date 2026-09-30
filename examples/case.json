@@ -1,34 +1,28 @@
 {
-  "schema_version": 1,
-  "model_id": "optical-dysthe-127-v1",
+  "schema_version": 2,
+  "model_id": "water-wave-dysthe-spatial-v1",
+  "physical_system": "deep-water-gravity-waves",
   "case_id": "example-only-coarse",
   "initial_condition_id": "example-only-packet",
-  "family": "periodic-packet",
+  "family": "periodic-wave-packet",
   "boundary": "periodic",
   "axis_order": [
-    "t",
-    "x",
-    "y",
-    "z"
+    "xi",
+    "tau"
   ],
   "field_encoding": "complex128",
   "shape": [
-    16,
-    16,
-    16
+    128
   ],
   "lengths": [
-    20,
-    20,
-    20
+    40
   ],
-  "times": [
+  "propagation_positions": [
     0,
     0.05
   ],
   "physics": {
-    "epsilon1": 0.01,
-    "epsilon2": 0.01
+    "epsilon": 0.05
   },
-  "status": "metadata-example-only; no generated or validated trajectory"
+  "status": "metadata-example-only; not a qualified numerical regime"
 }

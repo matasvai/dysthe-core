@@ -1,3 +1,3 @@
-"""Shared optical Dysthe metadata contracts; numerical ports are pending."""
-from .contracts import MODEL_ID, validate_case, validate_splits
-__all__ = ['MODEL_ID', 'validate_case', 'validate_splits']
+"""Water-wave Dysthe contracts; numerical migration remains pending."""
+from .contracts import MODEL_ID, PHYSICAL_SYSTEM, require_water_wave_model, validate_case, validate_splits
+__all__ = ['MODEL_ID', 'PHYSICAL_SYSTEM', 'require_water_wave_model', 'validate_case', 'validate_splits']

@@ -1,15 +1,20 @@
-# First migration
+# First water-wave migration
 
-Source: matasvai/dysthe-pinn at `bca8aa3833d79e5030ed53efab3bd94c9480aa54` (existing collaborator access required).
+The source is the existing project's `nonlinear/solver.py`, specifically
+`FourierModel(kind='dysthe')`, alongside `nonlinear/test_solver.py` and
+`report/nonlinear_solitary_wave_report.tex`. This source is not yet included in
+this public scaffold. The private PINN's optical solver is not the reference.
 
-1. On `codex/reference-migration`, port `src/dysthe_pinn/reference.py`, the
-   equation specification, and applicable independent physics tests.
-2. Preserve the legacy solver in place until identical-input comparisons pass.
-   Record upstream revision and file hashes in the port PR.
-3. Put initial-condition generation under `initial_conditions/`, independently
-   test width/box behavior, and add families on `codex/initial-condition-family`.
-4. Port diagnostic norms and refinement logic only after checking their optical
-   field meanings. Extract general pieces from `field_fno/metrics.py` as needed.
-5. Publish a pinned core revision before updating learning and experiment repos.
+1. On `codex/reference-migration`, port only the water-wave equation and applicable
+   numerical machinery. Record the source snapshot and SHA-256 of each file.
+2. Map the legacy generic profile `x` to `tau`, and evolution `t`/`T` to `xi`.
+   Preserve normalization, `(1,1,8,2,2)`, mean flow and retained-band projection.
+3. Keep the original files intact. Compare identical inputs and perform the
+   independent checks in model.md before accepting the port.
+4. On `codex/initial-condition-family`, define periodic packets, modulated
+   wavetrains and validated solitary-profile perturbations with stable group IDs.
+5. Derive diagnostics and losses for this free-surface envelope. Publish the
+   accepted core revision before updating downstream pins.
 
-No legacy source or historical run files have been copied by this scaffold.
+Historical results retain their original labels. No historical run has been
+promoted as evidence, and no numerical solver has been copied in this correction.
